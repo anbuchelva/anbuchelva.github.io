@@ -1,0 +1,37 @@
+# Theme
+remote_theme: 'epidrome/cover-card'
+
+# Title and tag line
+title: 'Anbuselvan Palaniyandi'
+description: 'an EPM specialist and an Android enthusiast'
+
+# Images
+avatar: 'avatar.jpg'
+background: 'background.jpg'
+favicon: 'favicon.ico'
+
+# Online profiles
+#facebook: ''
+twitter: 'anbuchelva'
+linkedin: 'anbuchelva'
+#instagram: ''
+#pinterest: ''
+#youtube: ''
+github: 'anbuchelva'
+#codepen: ''
+#steam: ''
+#soundcloud: ''
+#lastfm: ''
+#stack-overflow: ''
+#reddit: ''
+#medium:  ''
+#tumblr: ''
+#weibo: ''
+#vk: ''
+blog_url: 'https://blog.anbuchelva.in'
+email: 'email@anbuchelva.in'
+#messenger: ''
+
+# Advanced settings
+plugins:
+  - jekyll-remote-theme
