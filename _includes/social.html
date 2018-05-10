@@ -6,13 +6,21 @@
     {% if site.linkedin %}
     <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/in/{{ site.linkedin }}"><span class="description">LinkedIn</span></a></li>
     {% endif %}
-	
-    {% if site.twitter %}
-    <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/{{ site.twitter }}"><span class="description">Twitter</span></a></li>
-    {% endif %}
 
     {% if site.google_plus %}
     <li><a class="fa fa-2x fa-google-plus" href="https://plus.google.com/+{{ site.google_plus }}"><span class="description">Google +</span></a></li>
+    {% endif %}
+
+    {% if site.telegram %}
+    <li><a class="fa fa-2x fa-paper-plane" href="https://t.me/{{ site.telegram }}"><span class="description">Telegram</span></a></li>
+    {% endif %}
+
+    {% if site.github %}
+    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github }}"><span class="description">GitHub</span></a></li>
+    {% endif %}
+	
+    {% if site.twitter %}
+    <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/{{ site.twitter }}"><span class="description">Twitter</span></a></li>
     {% endif %}
 
     {% if site.vk %}
@@ -33,10 +41,6 @@
 
     {% if site.pinterest %}
     <li><a class="fa fa-2x fa-pinterest" href="https://pinterest.com/{{ site.pinterest }}"><span class="description">Pinterest</span></a></li>
-    {% endif %}
-
-    {% if site.github %}
-    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github }}"><span class="description">GitHub</span></a></li>
     {% endif %}
 
     {% if site.codepen %}
@@ -79,28 +83,24 @@
     <li><a class="fa fa-2x fa-tumblr" href="https://{{ site.tumblr }}.tumblr.com/"><span class="description">Tumblr</span></a></li>
     {% endif %}
 
-    {% if site.blog_url %}
-    <li><a class="fa fa-2x fa-tags" href="{{ site.blog_url }}"><span class="description">Blog</span></a></li>
-    {% endif %}
-
     {% if site.keybase %}
     <li><a class="fa fa-2x fa-key" href="https://keybase.io/{{ site.keybase }}"><span class="description">Keybase</span></a></li>
-    {% endif %}
-
-    {% if site.email %}
-    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
     {% endif %}
 
     {% if site.messenger %}
     <li><a class="fa fa-2x fa-facebook-messenger" href="https://m.me/{{ site.messenger }}"><span class="description">Messenger</span></a></li>
     {% endif %}
 
-    {% if site.telegram %}
-    <li><a class="fa fa-2x fa-paper-plane" href="https://telegram.me/{{ site.telegram }}"><span class="description">Telegram</span></a></li>
-    {% endif %}
-
     {% if site.snapchat %}
     <li><a class="fa fa-2x fa-snapchat" href="https://snapchat.com/add/{{ site.snapchat }}"><span class="description">Snapchat</span></a></li>
+    {% endif %}
+	
+    {% if site.blog_url %}
+    <li><a class="fa fa-2x fa-tags" href="{{ site.blog_url }}"><span class="description">Blog</span></a></li>
+    {% endif %}
+	
+    {% if site.email %}
+    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
     {% endif %}
 
     {% include too_social.html %}
