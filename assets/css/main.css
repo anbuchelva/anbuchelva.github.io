@@ -42,7 +42,7 @@
        url('../fonts/ruda-v9-latin-900.svg#Ruda') format('svg'); /* Legacy iOS */
 }
 body {
-    font: 16px/1.8 "Ruda", "Lato", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
+    font: 15px/1.8 "Ruda", "Lato", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
     color: #333;
 }
 
@@ -58,10 +58,13 @@ a {
 p {
     margin: 20px 0;
 }
-
-ul, ol {
-    list-style: none;
+ul {
+    list-style-position: outside;
+	margin-left: 20px;
 }
+/* ul, ol { */
+    /* list-style: none; */
+/* } */
 
 .vi {
     position: relative;
@@ -77,12 +80,90 @@ ul, ol {
 }
 
 .vi h1 {
-    text-align: center;
+    /* text-align: center; */
     position: relative;
-    top: -10px;
-    opacity: 0;
+    /* top: -10px; */
+	margin-left: 10px;
+    /* opacity: 0; */
+}
+.vi h2 {
+    text-align: left;
+    position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.vi h3 {
+    /* text-align: left; */
+    position: left;
+	/* text-decoration: underline; */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/* margin-left: 10px; */
+	/* margin-right: 10px; */
+}
+.vi h4 {
+    /* text-align: left; */
+    position: relative;	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.vi h5 {
+    text-align: left;
+    position: relative;	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.vi main {    
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.column {
+    float: left;
+    width: 30%;
+	margin-left: 10px;
+}
+@media screen and (max-width: 767px) {
+    .column {
+        width: 100%;
+		margin-left: 11px;
+    }
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+table {
+    width: 100%;
+	padding-left: 10px;
+	border-collapse: collapse;	
 }
 
+th {
+    height: 50px;
+	text-align: center;
+	border: 1px solid #ddd;
+	background-color: #4CAF50;
+	color: white;
+}
+td{
+	border: 1px solid #ddd;
+	padding-left: 10px;
+	vertical-align: center;
+}
+tr {
+    height: 20px;
+	text-align: left;
+	list-style-type: circle;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: 1px solid #ddd;
+}
 .quote {
     position: relative;
     margin: 40px 0;
@@ -160,7 +241,7 @@ ul, ol {
 
 @media (max-width: 767px) { 
     .sidebar {
-        padding: 0 40px;
+        padding: 0 20px;
     }
 }
 
@@ -203,9 +284,9 @@ ul, ol {
 .close {
     position: absolute;
     top: -10px;
-    right: 10px;
+    right: 5px;
+	padding-left: 5px;	
 }
-
 .animate-init {
     position: relative;
     top: -10px;
