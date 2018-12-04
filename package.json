@@ -1,0 +1,14 @@
+{
+  "name": "anbuchelva.in",
+  "version": "0.0.0",
+  "private": true,
+  
+  "scripts": {
+    "firebase-use": "firebase use --add anbuchelva-in",
+    "firebase-deploy": "firebase deploy --token ${FIREBASE_TOKEN}"
+  },
+  "dependencies": {
+    "firebase": "^5.1.1",
+    "firebase-tools": "^5.1.1"
+  }
+}
