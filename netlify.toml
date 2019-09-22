@@ -1,0 +1,3 @@
+[build]
+  publish = "_site"
+  command = "gem install jekyll && bundle install && jekyll build"
