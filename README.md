@@ -11,3 +11,5 @@ hosted by Github - https://anbuchelva.github.io
 hosted by Netlify - https://anbuchelva.netlify.com  
 hosted by Firebase - https://anbuchelva.in
 
+# Netlify Build Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5f4bc05-7927-4d5f-b5c1-d871eb7e700e/deploy-status)](https://app.netlify.com/sites/anbuchelva/deploys)
