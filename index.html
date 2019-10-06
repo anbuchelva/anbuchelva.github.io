@@ -14,7 +14,6 @@
 			padding: 0;
 			text-align: center;
 			position: relative;
-			margin: 10px auto;
 		}
 		#avatar {
 			border-radius: 250px;
@@ -25,7 +24,23 @@
 		body {
 			font: 15px/1.8 "Ruda", "Lato", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", "arial", "sans-serif";
 			color: #333;
-			width: 80%;
+		}
+		@media screen and (min-width: 400px) {
+		  * {
+			margin: auto;
+		  }
+		  body {
+			width: 100%;
+			}
+		}
+
+		@media screen and (min-width: 800px) {
+		  * {
+			margin: 6px auto;
+		  }
+		  body {
+			width: 70%;
+		  }
 		}
 		::selection {
 			background: #222;
@@ -50,7 +65,7 @@
 		}
 		.main a {
 			display: inline-block;
-			margin: 20px 10px 2px;
+			margin: 16px 10px 2px;
 			border-bottom: 1px solid #fff;
 			position: relative;
 		}
@@ -61,22 +76,18 @@
 			top: 1px !important;
 		}
 		.main i{
-		padding-right: 5px;
-		font-size: 1.2em;
+			padding-right: 5px;
+			font-size: 1.2em;
 		}
 		.menu::before {
 			font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
 		}
 		.location i {
-		margin-right: 5px;
-		font-size: 0.8em;
+			margin: 20px 5px;
+			font-size: 0.8em;
 		}
 		.location{
 			font-size: 0.9em;
-		}
-		.header h1{
-			<!-- font-size: 2.2em; -->
-			font-weight: bold;
 		}
 		.quote {
 			position: relative;
