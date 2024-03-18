@@ -81,7 +81,7 @@ To set up a similar system for personal use, you'll need:
 
 ![Botfather](/images/ather-log/botfather.png)
 
-{{< alert info >}}
+{{< alert >}}
 Refer this API Token as **BOT TOKEN**.
 {{< /alert >}}
 
@@ -97,7 +97,7 @@ You can rename the sheet the way you want and click 'Make a copy'.  Once the fil
 
 ![google-sheet-url](/images/ather-log/google-sheet-url.png)
 
-{{< alert info >}}
+{{< alert >}}
 Note the highlighted portion of the URL as the **Spread Sheet ID**.
 {{< /alert >}}
 
@@ -108,7 +108,7 @@ Visit https://drive.google.com/ and create a new folder.
 Choose a name, such as 'Ride Logs', and securely save the content from the address bar, as highlighted below. This information will be utilized in the subsequent step.
 ![google-drive-url](/images/ather-log/google-drive-url.png)
 
-{{< alert info >}}
+{{< alert >}}
 We'll refer to this section as the **DRIVE ID**
 {{< /alert >}}
 
@@ -143,12 +143,12 @@ Click Allow
 You will get a deployment URL. Keep it safe and do not share it with anyone.
 ![script-deploy-copy-url](/images/ather-log/script-deploy-copy-url.png)
 
-{{< alert info >}}
+{{< alert >}}
 lets call this URL as **WEBHOOK** for time being.
 {{< /alert >}}
 
-{{< alert danger >}}
-Do not try to deploying multiple times, if the URL changes then you need to modify few things later.
+{{< alert >}}
+**WARNING** Do not try to deploying multiple times, if the URL changes then you need to modify few things later.
 {{< /alert >}}
 
 Now click the gear icon on the left pane, which will open up the project settings.
@@ -159,8 +159,8 @@ Scroll to the bottom where you can see the Script Properties, then click on 'Add
 
 ### Update Script Properties
 
-{{< alert danger >}}
-This portion is very important. If anything missed out, the whole process might fail.
+{{< alert >}}
+**IMPORTANT** This portion is very important. If anything missed out, the whole process might fail.
 {{< /alert >}}
 
 Create the following Script Properties. To avoid spell error, copy and paste.
@@ -215,14 +215,14 @@ The changes that we made in the script properties should be deployed again. But 
 Click the 'Deploy' Button, then click 'Manage Deployments'.
 ![script-deploy-manage-deployments](/images/ather-log/script-deploy-manage-deployments.png)
 
-{{< alert danger >}}
-Do not click the new deployment. If you do, the webhook URL will change and it has to be reset.
+{{< alert >}}
+**WARNING** Do not click the new deployment. If you do, the webhook URL will change and it has to be reset.
 {{< /alert >}}
 
 Click on the pencil icon,on the version drop down choose 'New Version', then deploy.
 
-{{< alert warning >}}
-This step has to be done whenever we change something on the code or script properties.
+{{< alert >}}
+**IMPORTANT** This step has to be done whenever we change something on the code or script properties.
 {{< /alert >}}
 
 ![script-deploy-new-version](/images/ather-log/script-deploy-new-version.png)
@@ -244,8 +244,8 @@ Now do the same for `setWebhook`.
 
 Once it is done [Deploy It Again](#deploy-it-again).
 
-{{< alert success >}}
-if you are getting a result as 'ok: true' then, you have followed the steps without any mistakes.
+{{< alert >}}
+**SUCCESS:** if you are getting a result as 'ok: true' then, you have followed the steps without any mistakes.
 {{< /alert >}}
 
 Once the webhook is setup the telegram bot that we created above will start working.
@@ -254,7 +254,7 @@ Open the telegram app and open the bot that you have created. If you don't know 
 
 Hit 'Start' button. You need to get a message like
 
-{{< alert warning >}}
+{{< alert >}}
 Hey `firstName` Thank you for the interest in using this bot........ for more information about this project. Your ID is `chatId`.
 {{< /alert >}}
 
@@ -270,8 +270,8 @@ So your script proprties should have the telegram numeric IDs something like thi
 
 Now go back to telegram and send a message `/start`. You should be getting a welcome message.
 
-{{< alert success >}}
-You have setup this properly if you have set it up properly. If it is not working follow step [Deploy It Again](#deploy-it-again).
+{{< alert >}}
+**SUCCESS:** You have setup this properly if you have set it up properly. If it is not working follow step [Deploy It Again](#deploy-it-again).
 {{< /alert >}}
 
 
@@ -302,8 +302,8 @@ start - Initiate the bot
 daily_charts - Day level stats
 monthly_charts - Month level stats
 ```
-{{< alert warning >}}
-Do not make spell error, also the commands are case sensitive.
+{{< alert >}}
+**IMPORTANT** Do not make spell error, also the commands are case sensitive.
 {{< /alert >}}
 
 Once it is pasted the menu will be activated for the bot you have creaged and it will look like this.
