@@ -12,7 +12,7 @@ title = "Anbuselvan Palaniyandi"
   # mainSections = ["section1", "section2"]
   # description = "My awesome website"
 
-[author]
+[params.author]
   name = "Anbuselvan"
   image = "img/anbuchelva.jpg"
   headline = "Principal Consultant at Oracle, supports EPM platform"

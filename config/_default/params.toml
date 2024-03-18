@@ -12,6 +12,8 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 enableImageLazyLoading = true
+enableImageWebp = true
+enableQuicklink = true
 
 # robots = ""
 fingerprintAlgorithm = "sha256"
@@ -40,7 +42,7 @@ fingerprintAlgorithm = "sha256"
   showBreadcrumbs = true
   showDraftLabel = true
   showEdit = true
-  editURL = "https://github.com/anbuchelva/blog"
+  editURL = "https://github.com/anbuchelva/anbuchelva.github.io/content/"
   editAppendPath = true
   showHeadingAnchors = true
   showPagination = true
