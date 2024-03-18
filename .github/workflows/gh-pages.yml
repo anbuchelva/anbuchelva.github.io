@@ -26,8 +26,10 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Copy CNAME
-        run: cp CNAME public/
+      - name: Replace HTTP with HTTPS
+        run: |
+          find public -type f -exec sed -i 's|http://www.w3.org|https://www.w3.org|g' {} +
+          find public -type f -exec sed -i 's|http://www.sitemaps.org/|https://www.sitemaps.org/|g' {} +
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
