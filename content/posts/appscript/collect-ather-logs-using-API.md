@@ -255,7 +255,7 @@ Once you get the historical data, click 'Add Trigger' again and setup trigger fo
 Running these scripts directly from the App Script window would fail, as ather has already blocked those IP address. It works only by scheduling, until ather blocks them.
 {{< /alert >}}
 
-### Usage
+## Usage
 
 Start the bot or send `/start` command to the bot, it would repond with the shortcut keys to interact with the bot.
 
@@ -280,4 +280,4 @@ I strongly suggest that disable the api triggers when you are not using the vehi
 
 For questions, contact me on this [Telegram channel](https://t.me/ather_india). I'll respond when available, but immediate support isn't guaranteed.
 
-The code behind this process is open and available in {{< icon "github" >}} [github repository](https://github.com/anbuchelva/ev-log-bot/) under 'auto' branch. Adding a ⭐ would be much appreciated.
+The code behind this process is open and available in {{< icon "github" >}} [ github repository](https://github.com/anbuchelva/ev-log-bot/) under 'auto' branch. Adding a ⭐ would be much appreciated.
