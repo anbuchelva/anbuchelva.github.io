@@ -31,6 +31,9 @@ jobs:
           find public -type f -exec sed -i 's|http://www.w3.org|https://www.w3.org|g' {} +
           find public -type f -exec sed -i 's|http://www.sitemaps.org/|https://www.sitemaps.org/|g' {} +
 
+      - name: Copy CNAME
+        run: cp CNAME public/
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/hugo' }}
