@@ -22,11 +22,11 @@ thumbnailimage: 'images/ather-log/ather-logo.webp'
 TOC: true
 ---
 
-It has been 6+ months since the OCR based telegram bot was setup and opened to users. There were 60+ users using the bot and few setup their own bot at a time and the count started reducing to single digit. I expected that as long as there in any interactions from users, it will not work out.
+It has been 6+ months since the OCR based telegram bot was setup and opened to users. There were 60+ users using the bot and few of them setup their own bot at a time and the count started reducing to single digit. I expected that as long as there is any interactions required from users, it will not work out.
 
-I started setting up the API based bot 3+ months go and showed how to setup their own in the telegram group. Some are using it and found it is useful.
+I started setting up the API based bot 3+ months ago and showed how to setup their own in the telegram group. Some are using it and found it is useful.
 
-I want to write a proper document how to set it up so that it would be easy to implement. This bot will not be available centrally as it contains lot of personal information and holds lot of data which doesn't handle the free usage provided by Google and Telegram as highlighted in the previous post. So, if you plan to use it, you need to get your hands dirty.
+I want to write a proper documentation how to set it up so that it would be easy to implement. This bot will not be available centrally as it contains lot of personal information and holds lot of data which can't be handled the free usage provided by Google and Telegram as highlighted in the previous post. So, if you plan to use it, you need to get your hands dirty.
 
 The OCR based bot is continue to exist, there's no change on that.
 
@@ -47,9 +47,10 @@ One important thing to note, Ather might block this api access in future. So it 
 2. An Android phone with USB debugging enabled.
 3. A PC with Android Debug Bridge (ADB) installed (Google it how to install adb tools on pc)
 4. Ather connect subscription.
-5. A google account to store the ride details.
-6. A telegram account to interact with the data and getting alerts.
-7. Patience bro!
+5. A Google account to store the ride details.
+6. A Microsoft account to get the location names.
+7. A telegram account to interact with the data and getting alerts.
+8. Patience bro!
 
 {{< alert >}}
 To access the ride log records, you need to get access to the Ather's FireBase database using your Ather mobile app. Don't share your login credentials to any anyone unless you completely trust them.
@@ -60,8 +61,8 @@ To access the ride log records, you need to get access to the Ather's FireBase d
 1. User takes a ride, the relevant data would be shared to Ather for their analysis.
 2. Ather stores the data in their FireBase database.
 3. A script retrieves the data using API endpoints on a periodical interval and stores it in Google sheet.
-4. Telegram bot send an alert to the owner when there is an update / new ride.
-5. In addition, user can interact with bot for charts and analysis.
+4. Telegram bot send an alert to the owner when there is an update on new ride.
+5. In addition, an user can interact with bot for charts and analysis.
 
 ## Setup
 
@@ -84,7 +85,7 @@ The 400+ random character is your API **TOKEN**. Keep it safe for future use; do
 
 ### Get your Vehicle Identification Number (VIN)
 
-This should be available in your RC book or in the boot.
+This should be available in your RC book or in the boot or in the vehicle dashboard.
 
 {{< alert >}}
 Refer this as **VIN**.
@@ -168,7 +169,7 @@ These steps are required to access your google drive, google sheets, google docs
 
 ![script-authorize-access](/images/ather-log/script-authorize-access.png)
 
-Choose your gmail ID, if you don't want to use your primary gmail you can create a new one.
+Choose your gmail ID, if you don't want to use your primary gmail you can create/use a new one.
 ![script-authorize-gmail](/images/ather-log/script-authorize-gmail.png)
 
 You will get a warning that the app is unverified. Click advanced
@@ -228,7 +229,7 @@ Now do the same for `setWebhook`.
 if you are getting a result as 'ok: true' then, you have followed the steps without any mistakes.
 {{< /alert >}}
 
-Run `deleteWebook` function if you are using the same bot with a different google sheet. Then do the `setWebook`. Once the webhook setup is complete the telegram bot that you have created above will start working.
+Run `deleteWebook` function if you are already using the same bot with a different google sheet and you want to migrate it to this Google Sheet. Then do the `setWebook`. Once the webhook setup is complete the telegram bot that you have created above will start working.
 
 Open the telegram app and open the bot that you have created. If you don't know the bot, the link would be available in BotFather. Hit 'Start' button.
 
@@ -241,7 +242,7 @@ Create a trigger to trigger the **firstRun** function as mentioned below. Enter 
 ![script-trigger-first-run](/images/ather-log/script-trigger-first-run.png)
 
 {{< alert >}}
-Google app script would run for maximum 90 seconds. The function would extract approximately 1400 lines of data from the server in that time. You need to schedule it again till you get the latest ride (refer data sheet in Google sheet).
+Google app script would run for maximum 90 seconds. The function would extract approximately 1000 lines of data from the server in that time. You need to schedule it again and again till you get the latest ride (refer data sheet in Google sheet).
 {{< /alert >}}
 
 If you get any errors in this step, your ather TOKEN or MAPS_KEY might be wrong.
@@ -250,6 +251,8 @@ If you get any errors in this step, your ather TOKEN or MAPS_KEY might be wrong.
 
 Once you get the historical data, click 'Add Trigger' again and setup trigger for 'triggerApi' function. Now the 'Select type of time based trigger' field should be 'Minutes Timer' and minute interval should be 10 minutes.
 ![script-trigger-api](/images/ather-log/script-trigger-api.png)
+
+You may add additional triggers for monthly, weekly, daily summary with their respective intervals. It's optional.
 
 {{< alert >}}
 Running these scripts directly from the App Script window would fail, as ather has already blocked those IP address. It works only by scheduling, until ather blocks them.
