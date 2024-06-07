@@ -130,7 +130,7 @@ Get the ID of the slide and keep it for later use. Lets call it as **SLIDE_ID**.
 
 ### Google Sheets
 
-Make a copy of this Google Sheet: [Google Sheets Template](https://docs.google.com/spreadsheets/d/1PAL8Qf-AsHOC9s4Ddh_oO4DSCrHIhoMkFSoqVS_kiuM).
+Make a copy of this [Google Sheet (refer readme)](https://github.com/anbuchelva/ev-log-bot/tree/auto).
 ![google-sheet-make-a-copy](/images/ather-log/google-sheet-make-a-copy.png)
 
 It will ask you to name the file and also highlight that the scripts also will be saved.
