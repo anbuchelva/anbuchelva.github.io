@@ -1,7 +1,7 @@
 ---
 title: "Collect Ather Logs in Google Sheets via Telegram Bot"
 date: 2023-08-26
-updated: 2023-08-27
+updated: 2024-07-09
 categories:
   - projects
 tags:
@@ -26,6 +26,9 @@ I have been using the Ather 450X for over 8 months now. I prefer driving this ve
 
 The Ather app provides statistics such as the last 20 rides, monthly ride logs, charging statistics, etc. However, they recently stopped sending monthly logs. To continue analyzing the data, I decided to collect the logs myself.
 
+{{< alert >}}
+Follow this [post]({{< ref "collect-ather-logs-using-api/" >}}), if you wish to setup API based automatic bot.
+{{< /alert >}}
 <!--more-->
 <!--TOC-->
 
@@ -86,20 +89,13 @@ Refer this API Token as **BOT TOKEN**.
 {{< /alert >}}
 
 ### Setting up Google Sheets
-Make a copy of this Google Sheet: [Google Sheets Template](https://docs.google.com/spreadsheets/d/1dfx_kQSugj3TurJ-jAW5AT2xBzuTVgf6ZCAurRYmihU).
+Make a copy of this Google Sheet: [Google Sheets Template](https://docs.google.com/spreadsheets/d/1-gz_ZU68BW_B_QqDeG33Unr-aZUf-yNJLbgOyui7r5M/).
 ![google-sheet-make-a-copy](/images/ather-log/google-sheet-make-a-copy.png)
 
 It will ask you to name the file and also highlight that the scripts also will be saved.
 ![google-sheet-make-copy-name](/images/ather-log/google-sheet-make-copy-name.png)
 
 You can rename the sheet the way you want and click 'Make a copy'.  Once the file is saved, you will be able to make edits to the sheet.
-
-
-![google-sheet-url](/images/ather-log/google-sheet-url.png)
-
-{{< alert >}}
-Note the highlighted portion of the URL as the **Spread Sheet ID**.
-{{< /alert >}}
 
 ### Setting up Google Drive
 Visit https://drive.google.com/ and create a new folder.
@@ -168,20 +164,11 @@ Create the following Script Properties. To avoid spell error, copy and paste.
 ```
 ADMIN
 ALLOWED_USER_IDS
-SSID
 DRIVE_FOLDER_ID
 DOC_ID
 SLIDE_ID
 WEBHOOK_URL
 bot_token
-GROUP_CHECK
-GROUP_ID
-DRIVE_ID_USER_DATA
-LOG
-RUN_DATE_UPDATED
-RUN_TIME_COUNT
-RUN_TIME_MSEC
-
 ```
 The suggested values to be set on the Script Properties.
 
@@ -189,19 +176,12 @@ The suggested values to be set on the Script Properties.
 | :------------------ | :---------------------------------------------------------------- | :----------------------------------------------------------|
 | ADMIN               | Your Telegram ID                                                  | A numeric Value. Explained in later part how to get this.  |
 | ALLOWED_USER_IDS    | Your Telegram ID, If you want someone else to access your bot     | A numeric Value. Explained in later part how to get this.  |
-| SSID                | ID of the sample google sheet after making a copy                 | Get it from Address bar. Only the ID not the URL           |
 | DRIVE_FOLDER_ID     | Create a folder in Google Drive and update the ID here            | Get it from Address bar. Only the ID not the URL           |
 | DOC_ID              | Create a Doc file in Google Drive and update the ID here          | Get it from Address bar. Only the ID not the URL           |
 | SLIDE_ID            | Create a slide from Google Drive and update the ID here           | Get it from Address bar. Only the ID not the URL           |
 | WEBHOOK_URL         | Read the instructions from blog post                              | Keep it safe, do not share it with anyone.                 |
 | bot_token           | Your telegram bot token form BotFather                            | Keep it safe, don't share it withanyone.                   |
-| GROUP_CHECK         | false                                                             | Not required if you are not mainting a group               |
-| GROUP_ID            | NA                                                                | Not required if you are not mainting a group               |
-| DRIVE_ID_USER_DATA  | NA                                                                | Not required if you are not mainting a group               |
-| LOG                 | false                                                             | It will fill up the sheets, used only for debugging purpose|
-| RUN_DATE_UPDATED    | 0                                                                 | This will get updated automatically                        |
-| RUN_TIME_COUNT      | 0                                                                 | This will get updated automatically                        |
-| RUN_TIME_MSEC       | 0                                                                 | This will get updated automatically                        |
+
 
 It should look like the below picture.
 ![script-properties-list](/images/ather-log/script-properties-list.png)
@@ -300,6 +280,7 @@ The Botfather window would open and ask for commands. Copy and paste the followi
 ```
 start - Initiate the bot
 daily_charts - Day level stats
+weekly_charts - Week level stats
 monthly_charts - Month level stats
 ```
 {{< alert >}}
