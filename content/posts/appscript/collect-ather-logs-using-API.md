@@ -75,9 +75,9 @@ To access the ride log records, you need to get access to the Ather's FireBase d
 5. Connect your phone to your PC using an USB cable, then run `adb devices` command in the terminal window.
 6. You should get a message on your mobile phone to accept the authorization from your PC. Accept it.
 7. Run `adb devices` command once more. It should display your mobile phone's ID then a word `device`. You shouldn't be seeing unauthorized next to the phone ID, which represents that the phone is not authorized it yet.
-8. Run `adb logcat | grep user_cb_token` command if you are using linux; `adb logcat | findstr user_cb_token` command if you are using windows.
+8. Run `adb logcat | grep Bearer` command if you are using linux; `adb logcat -d | findstr Bearer` command if you are using windows.
 9. Open Ather mobile app and go to the **Charger** section on the bottom (should be on the 2nd item). Check for the below output.
-10. `<timestamp> <pid>  <pid>` D user_cb_token: Bearer <400+ character random text>
+10. `<timestamp> <pid>  <pid>` I System.out: Cosmo Log:: -> Authorization: Bearer <400+ character random text>
 
 {{< alert >}}
 The 400+ random character is your API **TOKEN**. Keep it safe for future use; do not share it with anyone.
