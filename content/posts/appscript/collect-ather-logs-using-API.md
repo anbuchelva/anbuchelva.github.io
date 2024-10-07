@@ -213,7 +213,7 @@ Follow any of the below steps to populate the data in the google sheets.
 #### Option 1: Github Actions
 
 1. Create a [github](https://github.com/) account, if you don't have one.
-2. Go to (ev-log-bot-addon)[https://github.com/anbuchelva/ev-log-bot-addon/fork] repo and fork it into your github account.
+2. Go to [ev-log-bot-addon](https://github.com/anbuchelva/ev-log-bot-addon/fork) repo and fork it into your github account.
 3. Go to Settings (should be available on the top) of the repo, then Secrets and Variables (should be available on the left) and click Actions.
 4. Under Secrets > Repository Secrets, click New Repository Secret button.
 5. You need to create 3 secrets (`API_TOKEN`, `SCOOTER_ID`, `WEBHOOK_URL`) with the relevant information.
@@ -231,7 +231,7 @@ The above option would work till Ather blocks the IP address of Github.
 
 #### Option 2: Using a home server or a pc
 
-1. Clone (ev-log-bot-addon)[https://github.com/anbuchelva/ev-log-bot-addon/] repo to your home server.
+1. Clone [ev-log-bot-addon](https://github.com/anbuchelva/ev-log-bot-addon/) repo to your home server.
 2. Make a copy of `.env_example` as `.env` and update the 3 variables that are relevant to your vehicle and your Google sheets.
 3. Suggest you to create a virtual env using venv, the code would work fine even without a virtual env.
 4. Install the requirements by running the command `pip install -r requiremnets.txt`.
@@ -285,4 +285,4 @@ I strongly suggest that disable the api triggers when you are not using the vehi
 
 For questions, contact me on this [Telegram channel](https://t.me/ather_india). I'll respond when available, but immediate support isn't guaranteed.
 
-The code behind this process is open and available in {{< icon "github" >}} [ github repository](https://github.com/anbuchelva/ev-log-bot/) under 'auto' branch. Adding a ⭐ would be much appreciated.
+The code behind this process is open and available in {{< icon "github" >}} [github repository](https://github.com/anbuchelva/ev-log-bot/) under 'auto' branch. Adding a ⭐ would be much appreciated.
