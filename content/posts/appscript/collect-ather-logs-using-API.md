@@ -266,10 +266,7 @@ Following are the shortcut keys (not case sensitive) at this time the blog post 
 
 `D` - Daily Charts  
 `W` - Weekly Charts  
-`M` - Monthly Charts  
-`T` - Trigger API & enable Triggers  
-`G` - Get API Status  
-`O` - Toggele Triggers ON or OFF  
+`M` - Monthly Charts
 `DS` - Daily Summary  
 `WS` - Weekly Summary  
 `MS` - Monthly Summary  
@@ -278,10 +275,6 @@ Following are the shortcut keys (not case sensitive) at this time the blog post 
 `AT <token>` - will replace the Ather token  
 `SOC value` - set an alert when the SOC drops below the value  
 `DASH` - displays the option to get the dashboard
-
-{{< alert >}}
-I strongly suggest that disable the api triggers when you are not using the vehicle by sending command `O`. So that, we don't overuse the api access and its win-win for users and Ather.
-{{< /alert >}}
 
 For questions, contact me on this [Telegram channel](https://t.me/ather_india). I'll respond when available, but immediate support isn't guaranteed.
 
