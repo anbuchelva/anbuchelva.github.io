@@ -26,9 +26,9 @@ It has been 6+ months since the OCR based telegram bot was setup and opened to u
 
 I started setting up the API based bot 3+ months ago and showed how to setup their own in the telegram group. Some are using it and found it is useful.
 
-I want to write a proper documentation how to set it up so that it would be easy to implement. This bot will not be available centrally as it contains lot of personal information and holds lot of data which can't be handled the free usage provided by Google and Telegram as highlighted in the previous post. So, if you plan to use it, you need to get your hands dirty.
+I want to write a proper documentation that explains how to set it up so that it would be easy to implement. This bot will not be available centrally as it contains lot of personal information and holds lot of data which can't be handled the free usage provided by Google and Telegram as highlighted in the previous post. So, if you plan to use it, you need to get your hands dirty.
 
-The OCR based bot is continue to exist, there's no change on that.
+The OCR based bot is continue to exist, there's no change on that. 
 
 <!--more-->
 <!--TOC-->
@@ -39,21 +39,23 @@ This is just the enhanced version of the previous OCR based bot, with less uers 
 
 The Ather mobile app stores only the last 20 rides. If the a person uses OCR based bot then (s)he can get the last 20 rides only. The automated bot extracts all the historical data from the vehicle purchase time.
 
-One important thing to note, Ather might block this api access in future. So it may or may not work. They already blocked api access for any triggers done from Google App script as of 5th Oct 2024. I'm updating a workaround how to trigger this api from other sources.
+One important thing to note, Ather might block this api access in future. So it may or may not work. 
+
+They already blocked api access for any triggers done from Google App script as of 5th Oct 2024. I'm updating a workaround how to trigger this api from other sources.
+
+Update on 14th Apr: Extracting the API token from ADB log is disabled from version 11.3.0 onwards. a workaround is added.
 
 ## Requirements
 
 1. You should be the owner of Ather Vehicle and you should have the option (password or OTP) to login to Ather mobile app.
-2. An Android phone with USB debugging enabled.
 3. A PC with python installed.
-4. Ather connect subscription.
 5. A Google account to store the ride details.
 6. A telegram account to interact with the data and getting alerts.
-7. A home server or a Github account to trigger the api, as Ather blocks the api access from Google App script.
-8. Patience bro!
+7. A home server or a Github account to trigger the API calls
+8. Some patience.
 
 {{< alert >}}
-To access the ride log records, you need to get access to the Ather's FireBase database using your Ather mobile app. Don't share your login credentials to any anyone unless you completely trust them.
+To access the ride log records, you need to get access to the Ather's FireBase database. Don't share your login credentials or VIN to anyone unless you completely trust them.
 {{< /alert >}}
 
 ## How It Works
