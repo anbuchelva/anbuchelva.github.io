@@ -1,7 +1,7 @@
 ---
 title: 'Collect Ather Ride Logs using API'
 date: 2024-03-17
-updated: 2024-10-05
+updated: 2025-04-14
 categories:
   - projects
 tags:
@@ -45,7 +45,7 @@ One important thing to note, Ather might block this api access in future. So it 
 
 1. You should be the owner of Ather Vehicle and you should have the option (password or OTP) to login to Ather mobile app.
 2. An Android phone with USB debugging enabled.
-3. A PC with Android Debug Bridge (ADB) installed (Google it how to install adb tools on pc)
+3. A PC with python installed.
 4. Ather connect subscription.
 5. A Google account to store the ride details.
 6. A telegram account to interact with the data and getting alerts.
@@ -68,19 +68,21 @@ To access the ride log records, you need to get access to the Ather's FireBase d
 
 ### Get API Key from Ather app
 
-1. **Windows User**: Make sure you have installed ADB drivers on your PC, then download the platform tools zip file from [Google's android developers website](https://developer.android.com/tools/releases/platform-tools). You may find lot of resources in the internet and youtube videos to complete it.
-2. **Linux User**: Use `sudo apt install adb fastboot` on debian based PC; `sudo pacman -S android-tools` on arch based PC.
-3. Go to your Android Phone > Settings > About Phone > Build Number > Tap 7 times till you get a message that shows that **You are now a developer**. This may be available in different places, depends on the phone manufacturer.
-4. **Windows User**: Open command prompt or terminal on your PC and go to the platform tools folder.
-5. Connect your phone to your PC using an USB cable, then run `adb devices` command in the terminal window.
-6. You should get a message on your mobile phone to accept the authorization from your PC. Accept it.
-7. Run `adb devices` command once more. It should display your mobile phone's ID then a word `device`. You shouldn't be seeing unauthorized next to the phone ID, which represents that the phone is not authorized it yet.
-8. Run `adb logcat | grep Bearer` command if you are using linux; `adb logcat -d | findstr Bearer` command if you are using windows.
-9. Open Ather mobile app and go to the **Support** section on the bottom (should be on the 3rd item), then go to `My ticketes` Check for the below output.
-10. `<timestamp> <pid>  <pid>` I System.out: Cosmo Log:: -> Authorization: Bearer <400+ character random text>
+Copy the contents of this gist to your local pc.
+
+{{< anbuchelva 433671423e6983e2436ce474c307df94 >}}
+
+the run the following commands
+
+```python
+pip install requests
+python ev-lot-bot-auth.py
+```
+
+Input your mobile number that is registered with your Ather vehicle, then the OTP. It will give you the api token, if the OTP is validated successfully.
 
 {{< alert >}}
-The 400+ random character is your API **TOKEN**. Keep it safe for future use; do not share it with anyone.
+The 400+ random character is your API **API_TOKEN**. Keep it safe for future use; do not share it with anyone.
 {{< /alert >}}
 
 ### Get your Vehicle Identification Number (VIN)
@@ -88,7 +90,7 @@ The 400+ random character is your API **TOKEN**. Keep it safe for future use; do
 This should be available in your RC book or in the boot or in the vehicle dashboard.
 
 {{< alert >}}
-Refer this as **VIN**.
+Refer this as **SCOOTER_ID**.
 {{< /alert >}}
 
 ### Setting up Telegram Bot
@@ -270,9 +272,8 @@ Following are the shortcut keys (not case sensitive) at this time the blog post 
 `DS` - Daily Summary  
 `WS` - Weekly Summary  
 `MS` - Monthly Summary  
-`set A/B/C` - Set Trip A/B/C  
+`set A/B/C` - Set Trip A/B/C by replying to the ride stat.
 `get A/B/C` - Get Trip A/B/C info  
-`AT <token>` - will replace the Ather token  
 `SOC value` - set an alert when the SOC drops below the value  
 `DASH` - displays the option to get the dashboard
 
