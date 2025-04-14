@@ -68,9 +68,9 @@ To access the ride log records, you need to get access to the Ather's FireBase d
 
 ### Get API Key from Ather app
 
-Copy the contents of this gist to your local pc.
+Copy the contents of this gist to your local pc and save it as `ev-lot-bot-auth.py`.
 
-{{< anbuchelva 433671423e6983e2436ce474c307df94 >}}
+{{< gist anbuchelva 433671423e6983e2436ce474c307df94 >}}
 
 the run the following commands
 
@@ -82,7 +82,7 @@ python ev-lot-bot-auth.py
 Input your mobile number that is registered with your Ather vehicle, then the OTP. It will give you the api token, if the OTP is validated successfully.
 
 {{< alert >}}
-The 400+ random character is your API **API_TOKEN**. Keep it safe for future use; do not share it with anyone.
+The 400+ random character is your **API_TOKEN**. Keep it safe for future use; do not share it with anyone.
 {{< /alert >}}
 
 ### Get your Vehicle Identification Number (VIN)
