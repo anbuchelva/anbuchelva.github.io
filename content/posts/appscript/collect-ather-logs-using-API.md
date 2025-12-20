@@ -33,6 +33,10 @@ The OCR based bot is continue to exist, there's no change on that.
 <!--more-->
 <!--TOC-->
 
+{{< danger >}}
+Ather has changed the api endpoints. The method suggested below no longer works. I suggest to use https://t.me/ev_log_bot to get your logs. It has more features than the below one.
+{{< /danger >}}
+
 ## Purpose
 
 This is just the enhanced version of the previous OCR based bot, with less uers interaction with more data such as ride mode, braking, coasting distance, etc.,
