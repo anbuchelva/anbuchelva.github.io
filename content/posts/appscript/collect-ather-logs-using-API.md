@@ -33,9 +33,9 @@ The OCR based bot is continue to exist, there's no change on that.
 <!--more-->
 <!--TOC-->
 
-{{< danger >}}
+{{< warning >}}
 Ather has changed the api endpoints. The method suggested below no longer works. I suggest to use https://t.me/ev_log_bot to get your logs. It has more features than the below one.
-{{< /danger >}}
+{{< /warning >}}
 
 ## Purpose
 
